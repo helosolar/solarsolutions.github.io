@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HELO Solar Solutions</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+    scroll-behavior:smooth;
+}
+
+body{
+    background:linear-gradient(135deg,#050a30,#1a237e,#3B3FC4);
+    color:#fff;
+}
+
+/* HEADER */
+header{
+    position:fixed;
+    width:100%;
+    top:0;
+    background:rgba(0,0,0,0.6);
+    display:flex;
+    justify-content:space-between;
+    padding:15px 40px;
+    z-index:1000;
+}
+
+nav a{
+    margin-left:20px;
+    color:#fff;
+    text-decoration:none;
+}
+
+/* HERO */
+.hero{
+    height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    animation:fadeIn 2s ease;
+}
+
+/* CALL BOX */
+.call-box{
+    margin-top:20px;
+    background:rgba(255,255,255,0.1);
+    padding:20px;
+    border-radius:15px;
+    animation:slideUp 1.5s ease;
+}
+
+.call-btn{
+    display:inline-block;
+    margin-top:10px;
+    padding:10px 20px;
+    background:#00f0ff;
+    color:#000;
+    border-radius:25px;
+    text-decoration:none;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+.call-btn:hover{
+    box-shadow:0 0 15px #00f0ff;
+    transform:scale(1.1);
+}
+
+/* BUTTONS */
+.btn{
+    padding:12px 25px;
+    border-radius:30px;
+    margin:10px;
+    display:inline-flex;
+    gap:8px;
+    align-items:center;
+    color:#fff;
+    transition:0.3s;
+}
+
+.btn:hover{
+    transform:scale(1.1);
+}
+
+.whatsapp{ background:#25D366; }
+.instagram{ background:linear-gradient(45deg,#feda75,#d62976,#962fbf); }
+.mission-vision-section{
+    padding:100px 20px;
+}
+
+/* CONTAINER */
+.mission-vision-box{
+    max-width:1000px;
+    margin:auto;
+    display:flex;
+    flex-wrap:wrap;
+    background:linear-gradient(135deg, rgba(0,240,255,0.1), rgba(0,0,0,0.6));
+    border-radius:20px;
+    box-shadow:0 0 25px rgba(0,240,255,0.2);
+    overflow:hidden;
+    text-align:center;
+}
+
+/* MISSION & VISION BOX */
+.mission, .vision{
+    flex:1;
+    padding:40px 30px;
+}
+
+/* TITLE */
+.mission h2, .vision h2{
+    color:#00f0ff;
+    margin-bottom:15px;
+    font-size:28px;
+}
+
+/* TEXT */
+.mission p, .vision p{
+    font-size:16px;
+    line-height:1.6;
+    color:#ddd;
+}
+
+/* DIVIDER */
+.divider{
+    width:2px;
+    background:rgba(0,240,255,0.4);
+    margin:0;
+}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+    .mission-vision-box{
+        flex-direction:column;
+    }
+    .divider{
+        width:100%;
+        height:2px;
+        margin:10px 0;
+    }
+}
+
+/* ANIMATION */
+.slide-left{
+    opacity:0;
+    transform:translateX(-50px);
+    animation:slideLeft 1.5s ease forwards;
+}
+
+.slide-right{
+    opacity:0;
+    transform:translateX(50px);
+    animation:slideRight 1.5s ease forwards;
+    animation-delay:0.3s;
+}
+
+@keyframes slideLeft{
+    to{opacity:1; transform:translateX(0);}
+}
+@keyframes slideRight{
+    to{opacity:1; transform:translateX(0);}
+}
+/* SECTION */
+.section{
+    padding:90px 20px;
+    text-align:center;
+}
+
+/* SERVICES */
+.services{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:25px;
+}
+
+.services a{
+    text-decoration:none;
+    color:#fff;
+}
+
+.card{
+    padding:20px;
+    width:220px;
+    border-radius:10px;
+    background:rgba(255,255,255,0.1);
+    transition:0.4s;
+    animation:fadeUp 1s ease;
+    display:block;
+}
+
+.card:hover{
+    transform:translateY(-10px) scale(1.05);
+    box-shadow:0 0 15px #00f0ff;
+}
+
+/* SERVICE BOX */
+.service-box{
+    margin-top:40px;
+    padding:25px;
+    background:rgba(0,0,0,0.5);
+    border-radius:15px;
+    animation:fadeUp 1.5s ease;
+}
+
+.service-box a{
+    display:inline-block;
+    margin-top:10px;
+    padding:10px 20px;
+    background:#25D366;
+    color:#fff;
+    border-radius:20px;
+    text-decoration:none;
+}
+
+/* CONTACT */
+.contact-box{
+    max-width:300px;
+    margin:auto;
+    background:rgba(0,0,0,0.4);
+    padding:20px;
+    border-radius:15px;
+    animation:fadeUp 1s ease;
+}
+
+input,textarea{
+    width:100%;
+    padding:10px;
+    margin:8px 0;
+    background:transparent;
+    border:1px solid #00f0ff55;
+    color:#fff;
+}
+
+button{
+    width:100%;
+    padding:10px;
+    background:#00f0ff;
+    border:none;
+    border-radius:20px;
+}
+
+/* WORK SECTION */
+.work-box{
+    display:flex;
+    flex-wrap:wrap;
+    align-items:center;
+    justify-content:center;
+    gap:40px;
+    margin-top:40px;
+    background:linear-gradient(135deg, rgba(0,0,0,0.6), rgba(0,0,50,0.7));
+    padding:30px;
+    border-radius:20px;
+    box-shadow:0 0 25px rgba(0,240,255,0.2);
+}
+
+/* ANIMATION */
+.slide-left{
+    opacity:0;
+    transform:translateX(-100px);
+    animation:slideLeft 1.5s ease forwards;
+}
+
+.slide-right{
+    opacity:0;
+    transform:translateX(100px);
+    animation:slideRight 1.5s ease forwards;
+    animation-delay:0.3s;
+}
+
+@keyframes slideLeft{
+    to{opacity:1; transform:translateX(0);}
+}
+
+@keyframes slideRight{
+    to{opacity:1; transform:translateX(0);}
+}
+
+.work-img img{
+    width:320px;
+    border-radius:15px;
+    box-shadow:0 0 20px rgba(0,240,255,0.3);
+    transition:0.4s;
+}
+
+.work-img img:hover{
+    transform:scale(1.05);
+}
+
+.work-text{
+    max-width:380px;
+    text-align:left;
+}
+
+.work-text h3{
+    font-size:26px;
+    color:#00f0ff;
+}
+
+.work-text p{
+    margin:6px 0;
+    color:#ddd;
+}
+
+.work-text h4{
+    margin-top:10px;
+    color:#00f0ff;
+}
+
+.work-text ul{
+    margin-top:10px;
+    padding-left:18px;
+}
+
+/* FLOATING */
+.floating{
+    position:fixed;
+    right:20px;
+    bottom:20px;
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+
+.float-btn{
+    width:55px;
+    height:55px;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:#fff;
+    font-size:22px;
+    animation:float 2s infinite;
+}
+
+.call{ background:#00bcd4; }
+.whatsapp{ background:#25D366; }
+.instagram{ background:linear-gradient(45deg,#feda75,#d62976,#962fbf); }
+
+@keyframes fadeIn{
+    from{opacity:0;}
+    to{opacity:1;}
+}
+
+@keyframes fadeUp{
+    from{opacity:0; transform:translateY(30px);}
+    to{opacity:1; transform:translateY(0);}
+}
+
+@keyframes slideUp{
+    from{transform:translateY(50px); opacity:0;}
+    to{transform:translateY(0); opacity:1;}
+}
+
+@keyframes float{
+    0%{transform:translateY(0);}
+    50%{transform:translateY(-8px);}
+    100%{transform:translateY(0);}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<h2>HELO Solar Solutions</h2>
+<nav>
+<a href="#home">Home</a>
+<a href="#services">Services</a>
+<a href="#contact">Contact</a>
+</nav>
+</header>
+
+<!-- HERO -->
+<section id="home" class="hero">
+<div>
+<h2>Save Money with Solar Energy</h2>
+<br></br>
+<br></br>
+<div class="call-box">
+<p>📞 Talk to our Solar Expert</p>
+<a href="tel:+919492773118" class="call-btn">Call Now</a>
+</div>
+
+<a href="https://wa.me/919492773118" class="btn whatsapp">
+<i class="fa-brands fa-whatsapp"></i> WhatsApp
+</a>
+
+<a href="https://www.instagram.com/helosolarsolutions" class="btn instagram">
+<i class="fa-brands fa-instagram"></i> Instagram
+</a>
+
+</div>
+</section>
+<section class="section mission-vision-section">
+
+  <div class="mission-vision-box">
+
+    <!-- OUR MISSION -->
+    <div class="mission slide-left">
+      <h2>Our Mission</h2>
+      <p>
+        To promote clean and green energy by providing high-quality solar installations 
+        and services that reduce electricity costs and support a sustainable future.
+      </p>
+    </div>
+
+    <!-- DIVIDER LINE -->
+    <div class="divider"></div>
+
+    <!-- OUR VISION -->
+    <div class="vision slide-right">
+      <h2>Our Vision</h2>
+      <p>
+        To become a trusted and leading solar solutions provider in India by offering innovative, 
+        affordable, and long-lasting energy systems.
+      </p>
+    </div>
+
+  </div>
+
+</section>
+
+</section>
+<!-- SERVICES -->
+<section id="services" class="section">
+<h2>Our Services</h2>
+<br></br>
+
+<div class="services">
+<a href="solar.html" class="card">☀️ Solar Installation</a>
+<a href="electrical.html" class="card">⚡ Electrical Works</a>
+<a href="solar-pump.html" class="card">💧 Solar Pumps</a>
+<a href="maintenance.html" class="card">🔧 Maintenance</a>
+</div>
+
+<br></br>
+<div class="service-box">
+<h3>Need Help Choosing the Right Solar Plan?</h3>
+<p>We provide customized solar solutions.</p>
+<a href="tel:+919492773118">Call for Free Consultation</a>
+</div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="section">
+<h2>Get Free Quote</h2>
+
+<div class="contact-box">
+<input type="text" placeholder="Name">
+<input type="tel" placeholder="Phone">
+<textarea placeholder="Requirement"></textarea>
+<button>Send</button>
+</div>
+</section>
+
+<!-- OUR WORK -->
+<section class="section">
+<h2>Our Works</h2>
+
+<div class="work-box">
+
+<div class="work-img slide-left">
+<img src="C:\Users\vinay\OneDrive\Desktop\nani website\logo.png" alt="Visiting Card">
+</div>
+
+<div class="work-text slide-right">
+<h3>J. NAGA RAJU</h3>
+<p><strong>MANAGER</strong></p>
+<p>📞 +91 9492 77 3118</p>
+<p>📧 helosolarsolutions@gmail.com</p>
+<p>📍 Arundalpet, Narasaraopet</p>
+<p>Palnadu, AP - 522601</p>
+
+<hr>
+
+<h4>Our Works</h4>
+<ul>
+<li>☀️ A to Z Solar Installations & Service</li>
+<li>💧 Solar Sprinklers & Plumbing</li>
+</ul>
+</div>
+
+</div>
+</section>
+
+<!-- FLOATING -->
+<div class="floating">
+<a href="tel:+919492773118" class="float-btn call"><i class="fa-solid fa-phone"></i></a>
+<a href="https://wa.me/919492773118" class="float-btn whatsapp"><i class="fa-brands fa-whatsapp"></i></a>
+<a href="https://www.instagram.com/helosolarsolutions" class="float-btn instagram"><i class="fa-brands fa-instagram"></i></a>
+</div>
+
+</body>
+</html>

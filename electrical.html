@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Electrical Works</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+
+body{
+    background:linear-gradient(135deg,#020611,#0a1f3c);
+    color:#fff;
+}
+
+/* LOADER */
+#loader{
+    position:fixed;
+    width:100%;
+    height:100%;
+    background:#000;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    z-index:9999;
+}
+
+.loader-circle{
+    width:50px;
+    height:50px;
+    border:5px solid #00f0ff;
+    border-top:5px solid transparent;
+    border-radius:50%;
+    animation:spin 1s linear infinite;
+}
+
+@keyframes spin{
+    100%{transform:rotate(360deg);}
+}
+
+/* HEADER */
+header{
+    display:flex;
+    justify-content:space-between;
+    padding:15px 40px;
+    background:rgba(0,0,0,0.7);
+}
+
+header h1{color:#00f0ff;}
+
+.hero{text-align:center;padding:80px 20px;}
+.hero h2{font-size:40px;text-shadow:0 0 20px #00f0ff;}
+
+.btn{
+    padding:12px 25px;
+    border:2px solid #00f0ff;
+    border-radius:30px;
+    color:#00f0ff;
+    text-decoration:none;
+    margin:10px;
+}
+
+/* SECTION */
+.section{padding:60px 20px;text-align:center;}
+
+/* CARDS */
+.cards{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:20px;
+}
+
+.card{
+    width:260px;
+    padding:20px;
+    background:rgba(255,255,255,0.05);
+    border-radius:15px;
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:scale(1.1);
+    box-shadow:0 0 20px #00f0ff;
+}
+
+/* IMAGES */
+.images{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.images img{
+    width:300px;
+    border-radius:15px;
+}
+
+/* ICON ANIMATION */
+.card:hover{
+    transform:translateY(-10px) scale(1.05);
+}
+</style>
+</head>
+
+<body>
+
+<div id="loader"><div class="loader-circle"></div></div>
+
+<header>
+<h1>HELO Solar</h1>
+<a href="index.html" style="color:white;">⬅ Back</a>
+</header>
+
+<section class="hero">
+<h2>⚡ Electrical Works</h2>
+<p>Safe & Professional Electrical Services</p>
+</section>
+
+<section class="section">
+<p>We provide high-quality electrical wiring, repairs, and installations for homes and industries.</p>
+</section>
+
+<section class="section">
+<div class="cards">
+<div class="card">🏠 Home Wiring</div>
+<div class="card">🏢 Commercial Work</div>
+<div class="card">🔧 Repairs</div>
+<div class="card">⚡ Panel Setup</div>
+</div>
+</section>
+
+<section class="section">
+<h2>Our Work</h2>
+<br></br>
+<div class="images">
+<img src="C:\Users\vinay\OneDrive\Desktop\nani website\ele1.jpeg">
+<img src="C:\Users\vinay\OneDrive\Desktop\nani website\ele2.jpeg">
+</div>
+</section>
+
+<script>
+window.onload = function(){
+    document.getElementById("loader").style.display="none";
+}
+</script>
+
+</body>
+</html>
